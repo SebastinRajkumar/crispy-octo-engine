@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Helper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color:#9523e8">
+<body>
+<script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"2eacbcac44cb55b8d9b2a5aafb67368be","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+    <div class="container">
+        <h1>STUDENT HELPER</h1>
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'calculator')">GPA Calculator</button>
+	    <button class="tablinks active" onclick="openTab(event, 'reminders')">Reminders</button>
+            
+        </div>
+        <div id="calculator" class="tabcontent">
+            <label for="grades">Enter your grades (comma separated):</label>
+            <input type="text" id="grades" placeholder="e.g. 4.0, 3.5, 3.0">
+            <button onclick="calculateGPA()">Calculate GPA</button>
+            <div id="result"></div>
+        </div>
+	<div id="reminders" class="tabcontent">
+    		<h2>Reminders</h2>
+    		<input type="text" id="reminderInput" placeholder="Enter your reminder">
+    		<input type="datetime-local" id="reminderTime" placeholder="Select reminder time" timezone="auto">
+    		<button onclick="setReminder()">Set Reminder</button>
+    		<ul id="reminderList"></ul>
+	</div>
+	<div>
+	<button class="tablinks active" onclick="openTab(event, 'quotes')">Change Quote</button>
+        </div>
+	<div id="quotes" class="tabcontent" style="display: block;">
+            <h2>Motivational Quotes</h2>
+            <div id="quote-container">
+                <p id="quote-text">Believe you can and you're halfway there. - Theodore Roosevelt</p>
+            </div>
+        </div>
+	
+
+    </div>
+
+    <script src="script.js"></script>
+	
+</body>
+</html>
