@@ -72,7 +72,6 @@ function calculateGPA() {
 }
 
 // Function to set a reminder notification
-// Function to set a reminder notification
 function setReminder() {
     var reminderInput = document.getElementById('reminderInput').value.trim();
     var reminderTime = document.getElementById('reminderTime').valueAsNumber;
